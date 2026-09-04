@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="YMG Yönetim Paneli gizlilik politikası, veri işleme esasları ve destek bilgileri.">
+  <title>Gizlilik Politikası — YMG Yönetim Paneli</title>
+  <link rel="icon" href="favicon.png">
+  <style>
+    :root {
+      --bg: #f6f8f6;
+      --card: #ffffff;
+      --ink: #1d2a1d;
+      --muted: #5a6b5a;
+      --brand: #1b5e1b;
+      --brand-soft: #e6f1e6;
+      --line: #dbe4db;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101610;
+        --card: #182018;
+        --ink: #e8efe8;
+        --muted: #a5b4a5;
+        --brand: #7fc57f;
+        --brand-soft: #1f2e1f;
+        --line: #2a382a;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { color-scheme: light dark; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 16px/1.6 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    header {
+      background: var(--brand);
+      color: #fff;
+      padding: 28px 20px;
+    }
+    header .wrap { max-width: 820px; margin: 0 auto; }
+    header h1 { margin: 0 0 6px; font-size: 1.6rem; line-height: 1.25; }
+    header p { margin: 0; opacity: .9; font-size: .95rem; }
+    main { max-width: 820px; margin: 0 auto; padding: 20px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-bottom: 18px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 0 0 10px;
+      color: var(--brand);
+    }
+    h3 { font-size: 1rem; margin: 18px 0 6px; }
+    p, li { margin: 0 0 10px; }
+    ul { padding-left: 22px; }
+    li { margin-bottom: 6px; }
+    .summary {
+      background: var(--brand-soft);
+      border-color: transparent;
+    }
+    .summary ul { margin: 0; }
+    .toc { font-size: .95rem; }
+    .toc ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 24px; }
+    .toc li { break-inside: avoid; }
+    @media (max-width: 560px) { .toc ol { columns: 1; } }
+    a { color: var(--brand); }
+    table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+    th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+    th { color: var(--muted); font-weight: 600; font-size: .85rem; text-transform: uppercase; letter-spacing: .03em; }
+    .table-wrap { overflow-x: auto; }
+    @media (max-width: 560px) {
+      table, tbody, tr, td { display: block; width: 100%; }
+      thead, tr:first-child { display: none; }
+      tr { border-bottom: 1px solid var(--line); padding: 10px 0; }
+      td { border: 0; padding: 2px 0; }
+      td::before { content: attr(data-l); display: block; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .03em; margin-top: 6px; }
+      td:first-child { font-weight: 600; }
+    }
+    .note { color: var(--muted); font-size: .9rem; }
+    code { background: var(--brand-soft); padding: 1px 6px; border-radius: 4px; font-size: .92em; }
+    footer { max-width: 820px; margin: 0 auto; padding: 10px 20px 40px; color: var(--muted); font-size: .85rem; }
+    .en { font-size: .92rem; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Gizlilik Politikası</h1>
+    <p>YMG Yönetim Paneli (iOS, Android ve web) · Yürürlük tarihi: 30 Ağustos 2026</p>
+  </div>
+</header>
+
+<main>
+  <section class="card summary">
+    <h2>Kısa özet</h2>
+    <ul>
+      <li>YMG Yönetim Paneli, emlak ofislerinin ekip, müşteri, portföy ve hedef takibi için kullandığı <strong>kurumsal (B2B)</strong> bir uygulamadır. Sadece ofis tarafından davet edilen kullanıcılar giriş yapabilir.</li>
+      <li>Verileriniz <strong>satılmaz</strong>, reklam amacıyla paylaşılmaz. Uygulamada reklam, analitik veya takip (tracking) SDK'sı <strong>yoktur</strong>.</li>
+      <li>Konum verisi <strong>toplanmaz</strong>. Kamera, fotoğraf ve mikrofon erişimi yalnızca siz istediğinizde, ilgili özelliği kullanmak için istenir.</li>
+      <li>Hesabınızı istediğiniz zaman <strong>uygulamanın içinden silebilirsiniz</strong> (profil menüsü → "Hesabımı Sil").</li>
+    </ul>
+  </section>
+
+  <section class="card toc">
+    <h2>İçindekiler</h2>
+    <ol>
+      <li><a href="#kapsam">Kapsam ve veri sorumlusu</a></li>
+      <li><a href="#veriler">Hangi veriler işlenir?</a></li>
+      <li><a href="#amac">Verilerin işlenme amacı</a></li>
+      <li><a href="#izinler">Cihaz izinleri</a></li>
+      <li><a href="#saglayicilar">Hizmet sağlayıcılar ve veri aktarımı</a></li>
+      <li><a href="#saklama">Saklama süresi ve hesap silme</a></li>
+      <li><a href="#guvenlik">Güvenlik</a></li>
+      <li><a href="#haklar">Haklarınız</a></li>
+      <li><a href="#cocuklar">Çocukların gizliliği</a></li>
+      <li><a href="#degisiklik">Değişiklikler</a></li>
+      <li><a href="#destek">Destek ve iletişim</a></li>
+      <li><a href="#english">English summary</a></li>
+    </ol>
+  </section>
+
+  <section class="card" id="kapsam">
+    <h2>1. Kapsam ve veri sorumlusu</h2>
+    <p>Bu politika, YMG Yönetim Paneli mobil uygulaması (iOS/Android), web sürümü ve bunların bağlandığı sunucu hizmeti ("Uygulama") tarafından işlenen kişisel verileri açıklar. Uygulama, Türkiye'de 6698 sayılı Kişisel Verilerin Korunması Kanunu'na (KVKK) uygun olarak işletilir.</p>
+    <p>Uygulama bir emlak ofisinin (broker'ın) kendi ekibi için açtığı hesap üzerinden kullanılır. Bu yapıda:</p>
+    <ul>
+      <li><strong>Ofis (broker hesabı sahibi)</strong>, ekibinin ve müşterilerinin verilerini Uygulama'ya girdiği için bu veriler bakımından <em>veri sorumlusu</em>dur.</li>
+      <li><strong>Uygulama'nın geliştiricisi</strong>, bu verileri yalnızca ofisin talimatıyla ve hizmeti sunmak için işleyen <em>veri işleyen</em> konumundadır; hesap açılışı, giriş ve destek gibi doğrudan kendi yürüttüğü işlemler bakımından ise veri sorumlusudur.</li>
+    </ul>
+    <p>Geliştirici ve iletişim bilgileri <a href="#destek">Destek ve iletişim</a> bölümündedir.</p>
+    <p class="note">Ücretsiz web demosu (<a href="./">kutlu53.github.io/emlak-demo</a>) tamamen tarayıcınızda çalışır; örnek verilerle gelir, sunucuya hiçbir veri göndermez ve hesap oluşturmaz.</p>
+  </section>
+
+  <section class="card" id="veriler">
+    <h2>2. Hangi veriler işlenir?</h2>
+    <h3>2.1 Hesap ve kullanıcı bilgileri</h3>
+    <ul>
+      <li>Ad soyad, e-posta adresi, telefon numarası, ofisteki rol (broker, danışman, asistan, direktör).</li>
+      <li>Broker hesapları için şifre — yalnızca geri döndürülemez biçimde özetlenmiş (hash) olarak saklanır; düz metin şifre hiçbir zaman kaydedilmez.</li>
+      <li>Davetli kullanıcılar için ofisin ürettiği tek kullanımlık davet kodu.</li>
+      <li>İsteğe bağlı profil bilgileri: profil fotoğrafı, kısa biyografi, eğitim ve ödüller.</li>
+    </ul>
+    <h3>2.2 Ofisin iş verileri (ofis tarafından girilir)</h3>
+    <ul>
+      <li>Müşteri kayıtları: ad soyad, telefon, e-posta, adres, talep/portföy bilgileri, görüşme notları, hatırlatmalar.</li>
+      <li>Portföy (mülk) kayıtları: adres, tapu bilgileri, fiyat, açıklama, fotoğraf ve rapor görselleri, yetki belgesi ve sözleşme bilgileri.</li>
+      <li>Pazarlama planları, günlük aktiviteler, hedefler, ciro ve komisyon kayıtları, koçluk notları.</li>
+      <li>Ekip içi mesajlar ve mesajla paylaşılan dosyalar.</li>
+    </ul>
+    <h3>2.3 Teknik veriler</h3>
+    <ul>
+      <li>Cihazınızda saklanan oturum anahtarı (token) — sizi her açılışta yeniden giriş yaptırmamak için.</li>
+      <li>Sunucu erişim kayıtları (IP adresi, istek zamanı, hata kayıtları) — güvenlik ve arıza tespiti için; kısa süreli tutulur.</li>
+      <li>Ödeme yapan ofisler için havale/EFT bildirimi bilgileri (gönderen adı, tutar, referans kodu). Uygulama kart bilgisi <strong>toplamaz</strong>.</li>
+    </ul>
+    <p class="note">Toplanmayanlar: konum, rehber, reklam kimliği, kullanım analitiği, çökme raporu, üçüncü taraf takip çerezleri.</p>
+  </section>
+
+  <section class="card" id="amac">
+    <h2>3. Verilerin işlenme amacı</h2>
+    <ul>
+      <li>Hesabınızı oluşturmak, kimliğinizi doğrulamak ve oturumunuzu sürdürmek.</li>
+      <li>Ofisinizin müşteri, portföy, hedef ve ekip takibini yapabilmesini sağlamak (Uygulama'nın temel işlevi).</li>
+      <li>Ekip içi mesajlaşma ve bildirimleri iletmek.</li>
+      <li>Şifre sıfırlama kodu ve ödeme bildirimi gibi işlem e-postalarını göndermek. Pazarlama e-postası gönderilmez.</li>
+      <li>Güvenliği sağlamak, kötüye kullanımı önlemek ve hataları gidermek.</li>
+      <li>Yasal yükümlülükleri yerine getirmek.</li>
+    </ul>
+    <p>Hukuki dayanak: sözleşmenin ifası (hizmetin sunulması), meşru menfaat (güvenlik, arıza tespiti) ve gerektiğinde açık rızanız (ör. mikrofon kullanımı).</p>
+  </section>
+
+  <section class="card" id="izinler">
+    <h2>4. Cihaz izinleri</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>İzin</th><th>Ne için</th><th>Zorunlu mu?</th></tr>
+        <tr><td data-l="İzin">Kamera / Fotoğraflar</td><td data-l="Ne için">Profil fotoğrafı, ofis logosu ve portföy/rapor görseli eklemek.</td><td data-l="Zorunlu mu?">Hayır — yalnız siz görsel eklemek istediğinizde.</td></tr>
+        <tr><td data-l="İzin">Mikrofon / Konuşma tanıma</td><td data-l="Ne için">Görüşme notunu sesle söyleyip yazıya çevirmek. Ses kaydı sunucumuza gönderilmez; yazıya çevirme cihazınızın işletim sistemi (Apple/Google) tarafından yapılır ve yalnızca ortaya çıkan metin kaydedilir.</td><td data-l="Zorunlu mu?">Hayır — yalnız sesli not özelliğinde.</td></tr>
+        <tr><td data-l="İzin">Bildirimler</td><td data-l="Ne için">Hatırlatma ve mesaj bildirimleri (cihaz üzerinde, yerel).</td><td data-l="Zorunlu mu?">Hayır.</td></tr>
+        <tr><td data-l="İzin">Konum</td><td data-l="Ne için">Kullanılmaz. Uygulama konum verisi toplamaz; iOS'ta görülen açıklama, dosya seçme bileşeninin sistem gereksinimi nedeniyle yer alır.</td><td data-l="Zorunlu mu?">—</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="card" id="saglayicilar">
+    <h2>5. Hizmet sağlayıcılar ve veri aktarımı</h2>
+    <p>Verileriniz yalnızca hizmeti sunmak için gerekli olan aşağıdaki altyapı sağlayıcılarıyla, sözleşme ve gizlilik yükümlülükleri çerçevesinde paylaşılır:</p>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Sağlayıcı</th><th>Görevi</th><th>Paylaşılan veri</th></tr>
+        <tr><td data-l="Sağlayıcı">Railway (railway.com)</td><td data-l="Görevi">Sunucu ve veri tabanı barındırma</td><td data-l="Paylaşılan veri">Uygulama'daki tüm kayıtlar (şifreli bağlantı ile)</td></tr>
+        <tr><td data-l="Sağlayıcı">Brevo (brevo.com)</td><td data-l="Görevi">İşlem e-postalarının gönderimi</td><td data-l="Paylaşılan veri">E-posta adresi, e-posta içeriği (şifre sıfırlama kodu, ödeme bildirimi)</td></tr>
+        <tr><td data-l="Sağlayıcı">Apple / Google</td><td data-l="Görevi">Uygulama dağıtımı; cihaz üzerinde konuşma tanıma</td><td data-l="Paylaşılan veri">Mağaza hesabınız (bizimle paylaşılmaz); sesli not kullanımında ses, işletim sisteminin konuşma tanıma hizmetince işlenir</td></tr>
+      </table>
+    </div>
+    <p>Sunucular yurt dışında bulunabilir; bu durumda aktarım KVKK'nın öngördüğü güvencelerle yapılır. Verileriniz üçüncü kişilere satılmaz, kiralanmaz ve reklam amacıyla paylaşılmaz. Yasal bir zorunluluk (mahkeme kararı vb.) dışında kamu kurumlarıyla paylaşılmaz.</p>
+  </section>
+
+  <section class="card" id="saklama">
+    <h2>6. Saklama süresi ve hesap silme</h2>
+    <p>Veriler, hesabınız veya ofisinizin hesabı açık kaldığı sürece saklanır. Hesabınızı istediğiniz zaman <strong>Uygulama'nın içinden</strong> silebilirsiniz: sağ üstteki profil menüsü → <strong>"Hesabımı Sil"</strong>.</p>
+    <ul>
+      <li><strong>Ofis (broker) hesabı silindiğinde</strong> ofisin tüm verisi — ekip üyeleri, müşteriler, portföyler, planlar, mesajlar ve yüklenen dosyalar — kalıcı olarak silinir. İşlem geri alınamaz ve şifre onayı ister.</li>
+      <li><strong>Davetli bir kullanıcı hesabını sildiğinde</strong> kişisel verileri (ad, telefon, e-posta, fotoğraf, biyografi, mesajları, favorileri, bildirimleri, davet kodu) silinir ve hesap kapatılır. Ofise ait iş kayıtları (müşteri ve portföy kayıtları) ofisin malı olduğundan ofiste kalır; bu kayıtların kaderi ofis (veri sorumlusu) tarafından belirlenir.</li>
+    </ul>
+    <p>Silme talebinizi <a href="#destek">destek adresine</a> e-posta ile de iletebilirsiniz; talep en geç 30 gün içinde sonuçlandırılır. Sunucu erişim kayıtları ve veri tabanı yedekleri en fazla 30 gün saklanır; silinen veriler bu sürenin sonunda yedeklerden de kalkar.</p>
+  </section>
+
+  <section class="card" id="guvenlik">
+    <h2>7. Güvenlik</h2>
+    <ul>
+      <li>Cihaz ile sunucu arasındaki tüm trafik HTTPS ile şifrelenir.</li>
+      <li>Şifreler tuzlanmış PBKDF2 özetiyle saklanır; davet kodları tek kullanımlıktır.</li>
+      <li>Her ofisin verisi sunucu tarafında ofis kimliğiyle ayrıştırılır; bir ofis başka bir ofisin verisine erişemez.</li>
+      <li>Giriş ve şifre işlemleri kaba kuvvet saldırılarına karşı hız sınırıyla korunur.</li>
+    </ul>
+    <p>Hiçbir sistem %100 güvenli değildir; bir veri ihlali fark edilirse etkilenen ofisler ve gerekli makamlar yasal süreler içinde bilgilendirilir.</p>
+  </section>
+
+  <section class="card" id="haklar">
+    <h2>8. Haklarınız</h2>
+    <p>KVKK'nın 11. maddesi kapsamında; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, düzeltilmesini veya silinmesini isteme, işlemeye itiraz etme ve zarara uğramanız hâlinde tazminat talep etme haklarına sahipsiniz. Taleplerinizi <a href="#destek">destek adresine</a> iletebilirsiniz. Ofisiniz tarafından girilen verilerle ilgili talepler, veri sorumlusu olan ofisinize de yöneltilebilir; bu durumda ofise gerekli teknik desteği sağlarız.</p>
+  </section>
+
+  <section class="card" id="cocuklar">
+    <h2>9. Çocukların gizliliği</h2>
+    <p>Uygulama yalnızca emlak ofisi çalışanlarına yönelik kurumsal bir araçtır ve 18 yaşından küçüklere yönelik değildir. Bilerek çocuklardan kişisel veri toplamayız.</p>
+  </section>
+
+  <section class="card" id="degisiklik">
+    <h2>10. Değişiklikler</h2>
+    <p>Bu politika gerektiğinde güncellenebilir. Güncel sürüm her zaman bu adreste yayımlanır; önemli değişiklikler Uygulama içinde veya e-posta ile duyurulur. Sayfanın üstündeki yürürlük tarihi son güncellemeyi gösterir.</p>
+  </section>
+
+  <section class="card" id="destek">
+    <h2>11. Destek ve iletişim</h2>
+    <p>Uygulama ile ilgili sorularınız, hata bildirimleriniz ve kişisel verilerinize ilişkin talepleriniz için:</p>
+    <ul>
+      <li><strong>Geliştirici:</strong> Mehmet Kutlu</li>
+      <li><strong>E-posta:</strong> <a href="mailto:mehmet.kutlu.dio@gmail.com">mehmet.kutlu.dio@gmail.com</a></li>
+      <li><strong>Web:</strong> <a href="https://kutlu53.github.io/emlak-demo/">kutlu53.github.io/emlak-demo</a></li>
+    </ul>
+    <p class="note">Taleplere en geç 30 gün içinde yanıt verilir. Bir ofisin ekibindeki kullanıcıysanız hesap ve davet kodu işlemleri için önce ofisinizin broker'ına başvurabilirsiniz.</p>
+  </section>
+
+  <section class="card en" id="english">
+    <h2>English summary</h2>
+    <p><strong>YMG Yönetim Paneli</strong> is a business (B2B) app for real-estate offices in Türkiye. Only users invited by their office can sign in. We collect account details (name, e-mail, phone, role, optional profile photo) and the business records the office enters (customers, properties, marketing plans, activities, targets, team messages and shared files). We do <strong>not</strong> collect location, contacts, advertising identifiers or analytics, and the app contains no advertising or tracking SDKs. Camera, photo library and microphone are used only on demand for the corresponding feature; speech-to-text runs on the device's operating system and only the resulting text is stored.</p>
+    <p>Data is hosted on Railway and transactional e-mails (password-reset codes, payment notices) are sent via Brevo. Data is never sold or shared for advertising. Users can <strong>delete their account inside the app</strong> (profile menu → "Hesabımı Sil" / "Delete my account"): an office owner's deletion removes the entire office's data; an invited user's deletion removes their personal data and closes the account while the office's business records remain with the office. Requests can also be sent to <a href="mailto:mehmet.kutlu.dio@gmail.com">mehmet.kutlu.dio@gmail.com</a>. Effective date: 30 August 2026.</p>
+  </section>
+</main>
+
+<footer>
+  © 2026 YMG Yönetim Paneli · <a href="#kapsam">Gizlilik Politikası</a> · <a href="#destek">Destek</a>
+</footer>
+</body>
+</html>
